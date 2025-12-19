@@ -93,5 +93,6 @@ if st.button("Predict Churn"):
     else:
         st.success(" Low churn risk — customer likely stays.")
 
-    with st.expander("View Processed Input Data"):
-        st.dataframe(input_df)
+    with st.expander("Processed Input Preview"):
+        st.dataframe(input_df.style.hide(axis="index").set_properties(**{"text-align": "center"}))
+
